@@ -1,0 +1,204 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0efea;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header */
+header {
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  z-index: 1000;
+  background-color: inherit;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+}
+
+.nav__item.active {
+  color: #8f8a89;
+  font-weight: bold;
+}
+
+.hlogo {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  padding-top: 6px;
+  width: 47px;
+  height: auto;
+  transition: filter 0.3s ease;
+}
+
+.myinfo {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav__item {
+  text-decoration: none;
+  font-size: 23px;
+  font-weight: normal;
+  transition: color 0.3s ease;
+  color: #1e1e2c;
+}
+
+.nav__item:hover {
+  color: #555;
+}
+
+/* Hamburger Menu Toggle */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  align-items: center;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: none;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
+}
+
+.theme-icon {
+  color: #c0c0c0;
+  transition: color 0.3s ease;
+}
+
+/* Themes */
+body.dark-theme {
+  background-color: #1e1e2c;
+  color: #f0efea;
+}
+
+body.light-theme {
+  background-color: #f0efea;
+  color: #333333;
+}
+
+body.dark-theme header,
+body.light-theme header {
+  background-color: inherit;
+  color: inherit;
+}
+
+body.light-theme .logo {
+  filter: invert(0);
+}
+
+body.dark-theme .logo {
+  filter: invert(1);
+}
+
+body.light-theme .nav__item {
+  color: #333333;
+}
+
+body.dark-theme .nav__item {
+  color: #f0efea;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .myinfo {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f0efea;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1000;
+    transition: color 0.3s ease;
+  }
+
+  .myinfo.open {
+    display: flex;
+  }
+
+  .nav__item {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .theme-toggle {
+    margin-top: 10px;
+    align-self: center;
+  }
+
+  body.dark-theme .myinfo {
+    background-color: #1e1e2c;
+    color: #f0efea;
+  }
+
+  body.light-theme .myinfo {
+    background-color: #f0efea;
+    color: #1a1a1a;
+  }
+}
+
+/* Section Styles */
+.intro,
+.about,
+.my_exp,
+.my_projects,
+.contact_me {
+  padding-top: 100px;
+  position: relative;
+  z-index: 1;
+  height: 700px;
+}
+
+.about {
+  background: white;
+}
+
+.my_projects {
+  background-color: burlywood;
+}
